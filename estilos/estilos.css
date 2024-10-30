@@ -1,0 +1,164 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#public-ip {
+    font-weight: bold;
+}
+
+.btn-dark-mode {
+    background-color: #e5322b;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-calculate {
+    background-color: #e5322b;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.converter-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.converter {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.converter h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.table {
+    background-color: #ffffff;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 8px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #e5322b;
+}
+
+.dark-mode .btn-dark-mode {
+    background-color: #333;
+    color: #e5322b;
+}
+
+.dark-mode .btn-calculate,
+.dark-mode .btn-secondary {
+    background-color: #e5322b;
+    color: #fff;
+}
+
+.dark-mode .section-container,
+.dark-mode .converter {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Media Query para pantallas pequeñas (como iPhone 5) */
+@media (max-width: 480px) {
+    .main-container {
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #public-ip {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .btn-dark-mode {
+        margin-top: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .section-container, .converter {
+        padding: 15px;
+    }
+
+    .converter h3 {
+        font-size: 0.9rem;
+    }
+
+    .btn-calculate {
+        font-size: 0.9rem;
+    }
+
+    .table th, .table td {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    .converter-container {
+        flex-direction: column;
+    }
+}
